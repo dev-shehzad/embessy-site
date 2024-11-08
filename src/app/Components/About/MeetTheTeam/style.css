@@ -1,0 +1,49 @@
+.team-member {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .layer-one, .layer-two {
+    position: absolute;
+    bottom: -66%;
+    left: 0;
+    right: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  .layer-one {
+    opacity: 0.6;
+  }
+  
+  .layer-two {
+    opacity: 0;
+  }
+  
+  .team-member:hover .layer-one {
+    transform: translateY(-75%);
+    opacity: 0.5;
+  }
+  
+  .team-member:hover .layer-two {
+    transform: translateY(-60%);
+    opacity: 1;
+  }
+  
+
+
+  /* LinkedIn icon is shown on hover */
+  .member-social {
+    position: absolute;
+   
+    opacity: 0;
+    transform: translateY(20px); /* Initially slide down */
+    transition: transform 1s ease-in, opacity 2s ease-in,opacity 0.4s ease-out; /* Smooth transition */
+    transition-delay: 0.3s;
+  }
+  
+  .group:hover .member-social {
+    opacity: 1;
+    transform: translateY(0); /* Slide up on hover */
+  }
+  
+

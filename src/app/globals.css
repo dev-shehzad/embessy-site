@@ -1,0 +1,327 @@
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banner {
+  background-image: linear-gradient(to left, #fbca15, #c8a116);
+  animation: animate-banner 2s ease-in-out forwards;
+}
+
+@keyframes animate-banner {
+  0% {
+    background-image: linear-gradient(to right, #fbca15, #c8a116);
+    opacity: 0;
+  }
+  50% {
+    background-image: linear-gradient(to right, #fbca15, #c8a116);
+    opacity: 0;
+  }
+  100% {
+    background-image: linear-gradient(to left, #fbca15, #c8a116);
+    opacity: 1;
+  }
+}
+
+.Poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.Roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes zoommd {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 3%, 0) rotateZ(0deg);
+    transform: rotateZ(0deg) translate3d(0, 3%, 0) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(360deg) translate3d(0, 3%, 0) rotateZ(-360deg);
+    transform: rotateZ(360deg) translate3d(0, 3%, 0) rotateZ(-360deg);
+  }
+}
+
+@keyframes pixFadeRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.scroll-circle {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.animate-ball .ball:nth-child(1) {
+  height: 50px;
+  width: 50px;
+  top: 37%;
+  left: 10%;
+  -webkit-animation: zoommd 1.5s infinite alternate;
+  animation: zoommd 1.5s infinite alternate;
+}
+
+.animate-ball .ball:nth-child(2) {
+  height: 70px;
+  width: 70px;
+  bottom: 22%;
+  right: 8%;
+  -webkit-animation: zoommd 4s infinite alternate;
+  animation: zoommd 4s infinite alternate;
+}
+
+animate-ball .ball:nth-child(4) {
+  height: 40px;
+  width: 40px;
+  bottom: 20%;
+  right: 32%;
+  -webkit-animation: movexy 1.5s infinite alternate;
+  animation: wave 1.5s infinite alternate;
+}
+
+.animate-ball .ball:nth-child(5) {
+  height: 500px;
+  width: 500px;
+  top: -75%;
+  right: 100px;
+  -webkit-animation: wave 3s 0.1s infinite linear;
+  animation: wave 3s 0.1s infinite linear;
+
+  @media (max-width: 1024px) {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.animate-ball .ball:nth-child(3) {
+  height: 100px;
+  width: 100px;
+  bottom: 43%;
+  right: 22%;
+  -webkit-animation: zoommd 1.5s infinite alternate;
+  animation: zoommd 1.5s infinite alternate;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    right: 20%;
+  }
+}
+
+.animate-ball .ball {
+  background: #fdf1f1;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* index.css or App.css */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-slide {
+  padding: 0 25px; /* Adjust the padding as needed */
+}
+
+/* Hide SVGs initially */
+.layer-one,
+.layer-two {
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Default transition */
+}
+
+/* First SVG transition */
+.layer-one {
+  transition-duration: 4000ms; /* 100ms for the second SVG */
+  transition-delay: 3000ms;
+}
+
+/* Second SVG transition */
+.layer-two {
+  transition-duration: 1000ms; /* 100ms for the second SVG */
+}
+
+/* Show SVGs on hover */
+.member-avater:hover .layer-one,
+.member-avater:hover .layer-two {
+  opacity: 1; /* SVGs become visible on hover */
+}
+
+/* pixFadeUp */
+
+@keyframes pixFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pixFadeUp {
+  animation: pixFadeUp 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* PixFade */
+
+@keyframes pixFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pixFade {
+  animation: pixFade 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* PixFadeRight */
+
+@keyframes pixFadeRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.pixFadeRight {
+  animation: pixFadeRight 1s ease-in;
+  animation-delay: 2s;
+}
+
+/* PixFadeLeft */
+
+@keyframes pixFadeLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.pixFadeLeft {
+  animation: pixFadeLeft 1s ease-in;
+  animation-delay: 0.6s;
+}
+
+.shadow-custom-2 {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15); /* No blur, sharp shadow */
+}
+
+.slider-container {
+  padding: 20px; /* Adjust as needed */
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0s;
+}
+
+.scroll-to-top.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Scrollbar styling for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 15px !important; /* Set the width of the scrollbar */
+  border-radius: 15px !important; /* Rounded corners for the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1 !important; /* Background color of the track */
+  border-radius: 10px !important; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f5c516 !important; /* Color of the scrollbar thumb */
+  border-radius: 15px !important; /* Rounded corners for the thumb */
+  border: 3px solid #f1f1f1 !important; /* Add padding inside the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f5c516 !important; /* Slightly darker yellow on hover */
+}
+
+/* Scrollbar styling for Firefox */
+* {
+  scrollbar-width: thin !important; /* Make scrollbar thinner */
+  scrollbar-color: #f5c516 #f1f1f1 !important; /* Set thumb (yellow) and track color */
+}
+
+/* For Firefox custom scrollbar */
+html {
+  scrollbar-color: #f5c516 #f1f1f1 !important; /* Scrollbar thumb and track */
+  scrollbar-width: thin !important; /* Thinner scrollbar width */
+}

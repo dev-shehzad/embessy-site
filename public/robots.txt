@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /api/           # Disallow any API routes if you have them
+Disallow: /private/       # Example of a disallowed folder
+
+Allow: /                  # Allow everything else
+# Sitemap location
+Sitemap: https://www.yourwebsite.com/sitemap.xml

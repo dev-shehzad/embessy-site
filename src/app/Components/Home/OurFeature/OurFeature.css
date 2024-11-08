@@ -1,0 +1,75 @@
+.featured-two-same {
+	padding-top: 144px;
+	padding-bottom: 27px;
+}
+.featured-two-same .section-title {
+	margin-bottom: 80px;
+}
+.featured-two-same .saaspik-icon-box-wrapper.style-two .pixsass-icon-box-content .pixsass-icon-box-title a {
+	color: #2b2350;
+}
+.featured-two-same .saaspik-icon-box-wrapper.style-two .pixsass-icon-box-content .pixsass-icon-box-title a:hover {
+	color: #7052fb;
+}
+.featured-two-same .scroll-circle {
+	bottom: auto;
+	top: -50%;
+}
+
+.section-title {
+	margin-bottom: 70px;
+}
+
+.saaspik-icon-box-wrapper {
+	margin-bottom: 30px;
+}
+
+.saaspik-icon-box-wrapper {
+	margin-bottom: 30px;
+}
+
+.featured-two-same {
+	padding-top: 144px;
+	padding-bottom: 27px;
+}
+
+.container-wrap {
+	max-width: 95%;
+	margin: 0 auto;
+	border-radius: 20px;
+	position: relative;
+}
+
+.section-title {
+	margin-bottom: 70px;
+}
+
+-color-two {
+	background-color: #d9e6ff;
+}
+.sub-title {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #7052fb;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+}
+
+.saaspik-icon-box-wrapper {
+	margin-bottom: 30px;
+}
+
+.style-two {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.3);
+	color: #fff;
+	padding: 9px 37px;
+}
+
+.pixsass-icon-box-title {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 30px;
+	margin-bottom: 0;
+}
