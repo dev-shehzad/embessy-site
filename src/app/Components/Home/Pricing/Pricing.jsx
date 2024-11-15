@@ -133,96 +133,96 @@ const Pricing = () => {
               key={index}
               className="bg-[#f8f7fc]  flex flex-col justify-between  hover:bg-white hover:shadow-lg w-full sm:w-[70%] mx-auto lg:w-full transition-all px-[30px] pt-[30px] pb-[40px]"
             >
-               <div className=" ">
-              <h4 className="text-[40px] text-left font-semibold text-[#2b2350] Poppins">
-                {plan.name}
-              </h4>
-              {plan.validity && (
-                <p className="text-[16px] text-left text-[#797687] mt-2">
-                  {plan.validity}
-                </p>
-              )}
-              <div className="text-[30px] text-left font-Poppins mt-[5px]">
-                <span
-                  className={`${
-                    plan.name === "Starter"
-                      ? "text-[#fa7070]"
-                      : "text-[#8070fa]"
-                  } text-[30px] text-left font-[700] font-Poppins mb-[25px]`}
-                >
-                  {billingCycle === "monthly"
-                    ? plan.monthlyPrice
-                    : plan.annualPrice}
-                </span>
-
-                <div>
-                  <p className="text-[16px] font-Poppins text-[#797687] font-normal w-[100%] text-left mt-[30px] mx-auto">
-                    {plan.paragraph}
+              <div className=" ">
+                <h4 className="text-[40px] text-left font-semibold text-[#2b2350] Poppins">
+                  {plan.name}
+                </h4>
+                {plan.validity && plan.name !== "Free Trial" && (
+                  <p className="text-[16px] text-left text-[#797687] mt-2">
+                    {plan.validity}
                   </p>
-                  {plan.setupFee && (
-                    <>
-                      <p
-                        className={`text-[16px] font-Poppins font-normal w-[100%] text-left mt-2 ${
-                          plan.name === "Standard"
-                            ? "text-blue-500"
-                            : "text-[#fa7070]"
-                        }`}
-                      >
-                        {plan.setupFee}
+                )}
+                <div className="text-[30px] text-left font-Poppins mt-[5px]">
+                  <span
+                    className={`${
+                      plan.name === "Starter"
+                        ? "text-[#fa7070]"
+                        : "text-[#8070fa]"
+                    } text-[30px] text-left font-[700] font-Poppins mb-[25px]`}
+                  >
+                    {billingCycle === "monthly"
+                      ? plan.monthlyPrice
+                      : plan.annualPrice}
+                  </span>
+
+                  {plan.name === "Free Trial" && (
+                    <p className="text-[30px] text-left font-[700] font-Poppins mb-[25px] opacity-0">
+                      € 50 per month
+                    </p>
+                  )}
+                  <div>
+                    <p className="text-[16px] font-Poppins text-[#797687] font-normal w-[100%] text-left mt-[30px] mx-auto">
+                      {plan.paragraph}
+                    </p>
+                    {plan.setupFee &&
+                      plan.name !== "Free Trial" && ( // Only show setup fee for non-Free Trial plans
+                        <>
+                          <p
+                            className={`text-[16px] font-Poppins font-normal w-[100%] text-left mt-2 ${
+                              plan.name === "Standard"
+                                ? "text-blue-500"
+                                : "text-[#fa7070]"
+                            }`}
+                          >
+                            {plan.setupFee}
+                          </p>
+                          <p className="text-[16px] text-left text-blue-500">
+                            <Link href="faq" className="text-black">
+                              See <span className="text-blue-500"> FAQ </span>
+                              for details
+                            </Link>
+                          </p>
+                        </>
+                      )}
+
+                    {/* Add Custom setup fee for Free Trial */}
+                    {plan.name === "Free Trial" && (
+                      <p className="text-[16px] font-Poppins text-[#797687] font-normal w-[100%] text-left mt-[30px] mx-auto opacity-0">
+                        Invoiced up-front
                       </p>
-                      <p className="text-[16px] text-left text-blue-500">
+                    )}
+                    {plan.name === "Free Trial" && (
+                      <p className="text-[16px] font-Poppins font-normal text-[#fa7070] opacity-0">
+                        + € 3000 set up one-time fee
+                      </p>
+                    )}
+                    {plan.name === "Free Trial" && (
+                      <p className="text-[16px] text-left text-blue-500 opacity-0">
                         <Link href="faq" className="text-black">
                           See <span className="text-blue-500"> FAQ </span>for
                           details
                         </Link>
                       </p>
-                    </>
-                  )}
+                    )}
+                  </div>
                 </div>
+                {plan.users && (
+                  <p className="font-semibold text-left text-[#2b2350] font-Poppins text-[28px] mb-[10px] pt-[20px]">
+                    {plan.users}
+                  </p>
+                )}
               </div>
-              {plan.users && (
-                <p className="font-semibold text-left text-[#2b2350] font-Poppins text-[28px] mb-[10px] pt-[20px]">
-                  {plan.users}
-                </p>
-              )}
-             </div>
               <div className=" mt-auto  min-h-[370px] !justify-self-end  ">
-              <div className="my-[60px] border-t-[2px] border-[##b4b2bf] border-dashed"></div>
+                <div className="my-[60px] border-t-[2px] border-[##b4b2bf] border-dashed"></div>
 
-              <ul className="mt-4 space-y-2 font-Poppins">
-                {plan.pros.map((pro, i) => (
-                  <li
-                    key={i}
-                    className="text-[#797687] text-[16px] font-Poppins flex items-center"
-                  >
-                    <svg
-                      className="h-5 w-5 text-green-500 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    {pro}
-                  </li>
-                ))}
-              </ul>
-
-              {plan.cons && (
-                <ul className="mt-2 space-y-2">
-                  {plan.cons.map((con, i) => (
+                <ul className="mt-4 space-y-2 font-Poppins">
+                  {plan.pros.map((pro, i) => (
                     <li
                       key={i}
-                      className="text-[#797687]  text-[16px] font-Poppins flex items-center"
+                      className="text-[#797687] text-[16px] font-Poppins flex items-center"
                     >
                       <svg
-                        className="h-5 w-5 text-red-500 mr-2"
+                        className="h-5 w-5 text-green-500 mr-2"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -232,30 +232,56 @@ const Pricing = () => {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth="2"
-                          d="M6 18L18 6M6 6l12 12"
+                          d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      {con}
+                      {pro}
                     </li>
                   ))}
                 </ul>
-              )}
 
-              {plan.additionalFeatures && (
-                <ul className="mt-2 space-y-2 text-left">
-                  {plan.additionalFeatures.map((feature, i) => (
-                    <li
-                      key={i}
-                      className="text-[#797687] text-[16px] font-Poppins flex items-center"
-                    >
-                      <span className="flex items-center justify-center h-5 w-5 text-[20px] rounded-full text-[#f5c516] mr-2">
-                        ?
-                      </span>
-                      {feature.text}
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {plan.cons && (
+                  <ul className="mt-2 space-y-2">
+                    {plan.cons.map((con, i) => (
+                      <li
+                        key={i}
+                        className="text-[#797687]  text-[16px] font-Poppins flex items-center"
+                      >
+                        <svg
+                          className="h-5 w-5 text-red-500 mr-2"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                        {con}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {plan.additionalFeatures && (
+                  <ul className="mt-2 space-y-2 text-left">
+                    {plan.additionalFeatures.map((feature, i) => (
+                      <li
+                        key={i}
+                        className="text-[#797687] text-[16px] font-Poppins flex items-center"
+                      >
+                        <span className="flex items-center justify-center h-5 w-5 text-[20px] rounded-full text-[#f5c516] mr-2">
+                          ?
+                        </span>
+                        {feature.text}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
 
               <div className="mt-11 justify-self-end  flex items-end justify-center">
