@@ -6,4 +6,4 @@ Disallow: /private/       # Example of a disallowed folder
 
 Allow: /                  # Allow everything else
 # Sitemap location
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Sitemap: https://embedsy.io/sitemap.xml
