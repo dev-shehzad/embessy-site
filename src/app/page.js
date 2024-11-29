@@ -34,7 +34,7 @@ const Page = () => {
         {/* Open Graph tags */}
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.ogImage} />
+        <meta property="og:image" content="/fav.png" />
         <meta property="og:url" content={metadata.url} />
         <meta property="og:type" content="website" />
 
