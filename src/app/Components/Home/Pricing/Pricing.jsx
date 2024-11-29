@@ -14,7 +14,7 @@ const Pricing = () => {
       users: "20 users",
       validity: "Valid for 14 days",
       pros: ["Unlimited Reports", "Row-level Security (RLS)", "Custom Design"],
-      cons: ["Custom Domain", "Live Installation Support", "Support"],
+      cons: ["Custom Domain", " Live Installation Support", "Support"],
       actionText: "Get started",
     },
     {
