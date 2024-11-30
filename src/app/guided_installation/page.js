@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import PageBanner from "../Components/Home/Hero/Hero";
 import Link from "next/link";
+import Head from "next/head";
 export const metadata = {
   title:
     "Guided Installation - Embedsy | Easy Installation of the Embedsy Portal",
@@ -9,11 +10,31 @@ export const metadata = {
     "Discover the new guided installation process for the Embedsy Portal. Our fully automated installation wizard ensures a seamless setup experience. Contact us to request your installation.",
   keywords:
     "Embedsy installation, guided installation, Embedsy Portal, automated setup, installation wizard",
-};
+    url: "https://embedsy.io/guided_installation",
+    ogImage: "/fav.png",  // Replace with your image path
+  };
 
 const page = () => {
   return (
     <div className=" overflow-x-hidden max-w-screen">
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+
+        {/* Open Graph tags */}
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.ogImage} />
+        <meta property="og:url" content={metadata.url} />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content={meta.ogImage} />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.ogImage} />
+      </Head>
       <PageBanner name="Guided Installation" />
       <section className="">
         <div className="max-w-[1200px] w-full mx-auto">

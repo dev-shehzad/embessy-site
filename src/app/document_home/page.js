@@ -7,7 +7,7 @@ export const metadata = {
     "Explore the comprehensive documentation for Embedsy Portal. Browse through topics to find essential information and guides. If you have questions, feel free to contact us.",
   keywords:
     "Embedsy documentation, Embedsy Portal guide, user manual, help center, FAQs, product documentation",
-    url: "https://embedsy.io/",
+    url: "https://embedsy.io/document_home",
     type: "website",
     ogImage: "/fav.png", // Replace with your image path
 };
@@ -27,7 +27,7 @@ export default function page() {
         <meta property="og:type" content="website" />
 
         {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content={metadata.ogImage} />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.ogImage} />

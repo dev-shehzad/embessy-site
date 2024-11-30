@@ -45,7 +45,7 @@ const page = () => {
         <meta property="og:type" content="website" />
 
         {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content={generateMetadata.ogImage} />
         <meta name="twitter:title" content={generateMetadata.title} />
         <meta name="twitter:description" content={generateMetadata.description} />
         <meta name="twitter:image" content={generateMetadata.ogImage} />

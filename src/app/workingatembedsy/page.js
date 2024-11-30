@@ -1,13 +1,40 @@
-"use client";
-import React, { useEffect } from "react";
-import { Fade } from "react-awesome-reveal";
+import React from "react";
 import Image from "next/image";
 import PageBanner from "../Components/Home/Hero/Hero";
 import Link from "next/link";
-
+import Head from "next/head";
+export const metadata = {
+  title: "Documentation - Embedsy | Comprehensive Guide to Our Portal",
+  description:
+    "Explore the comprehensive documentation for Embedsy Portal. Browse through topics to find essential information and guides. If you have questions, feel free to contact us.",
+  keywords:
+    "Embedsy documentation, Embedsy Portal guide, user manual, help center, FAQs, product documentation",
+    url: "https://embedsy.io/workingatembedsy",
+    type: "website",
+    ogImage: "/fav.png", // Replace with your image path
+};
 const page = () => {
   return (
+    
     <div className=" overflow-x-hidden max-w-screen">
+<Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+
+        {/* Open Graph tags */}
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.ogImage} />
+        <meta property="og:url" content={metadata.url} />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content={metadata.ogImage} />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.ogImage} />
+      </Head>
       <PageBanner name="Working at embedsy" />
       <section className="">
         <div className="max-w-[1200px] w-full mx-auto">

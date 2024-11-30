@@ -39,7 +39,7 @@ const Page = () => {
         <meta property="og:type" content="website" />
 
         {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content={metadata.ogImage} />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.ogImage} />
